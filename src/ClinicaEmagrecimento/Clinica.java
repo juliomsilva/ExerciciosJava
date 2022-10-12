@@ -5,19 +5,6 @@ import java.util.*;
 public class Clinica {
     static List<Cliente> clientes = new ArrayList<>();
     String dono;
-
-    public static void cadastrarCliente(Cliente cliente){
-        clientes.add(cliente);
-    }
-
-    public static void categorizarCliente(){
-         clientes.forEach(r -> {
-             double resultadoIMC = Cliente.calcularImc(r.peso,r.altura);
-             System.out.printf(" - IMC:%.2f Peso:%.1fKg Altura:%.2f\n", resultadoIMC,r.peso, r.altura);
-
-    });
-    }
-
     public static void main(String[] args) {
         Cliente cliente1 = new Cliente(80.0,1.70);
         Cliente cliente2 = new Cliente(75.0,1.70);
@@ -34,6 +21,18 @@ public class Clinica {
 
 
         tratamentoPersonalizado(cliente1,10);
+    }
+
+    public static void cadastrarCliente(Cliente cliente){
+        clientes.add(cliente);
+    }
+
+    public static void categorizarCliente(){
+         clientes.forEach(r -> {
+             double resultadoIMC = Cliente.calcularImc(r.peso,r.altura);
+             System.out.printf(" - IMC:%.2f Peso:%.1fKg Altura:%.2f\n", resultadoIMC,r.peso, r.altura);
+
+    });
     }
 
     public static void tratamentoCinco(Cliente cliente) {
