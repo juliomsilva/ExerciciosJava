@@ -13,7 +13,7 @@ public class Clinica {
     public static void categorizarCliente(){
          clientes.forEach(r -> {
              double resultadoIMC = Cliente.calcularImc(r.peso,r.altura);
-             System.out.printf(" - IMC:%.2f Peso:%.1f Altura:%.2f\n", resultadoIMC,r.peso, r.altura);
+             System.out.printf(" - IMC:%.2f Peso:%.1fKg Altura:%.2f\n", resultadoIMC,r.peso, r.altura);
 
     });
     }
@@ -32,7 +32,27 @@ public class Clinica {
 
         categorizarCliente();
 
+
+        tratamentoPersonalizado(cliente1,10);
     }
 
+    public static void tratamentoCinco(Cliente cliente) {
 
+        System.out.println("\nBem vindo ao tratamento de redução de 5kg");
+        System.out.println("--------------------------------------------");
+        System.out.printf("Seu peso atual é de: %.2fKg\n",cliente.peso);
+        System.out.printf("\nApós o tratamento seu peso será: %.2fKg ",(cliente.peso-5));
+
+
+
+
+    }
+    public static void tratamentoPersonalizado(Cliente cliente, Integer kg){
+
+        System.out.println("\nBem vindo ao tratamento Personalizado, \naqui você escolhe o quanto quer emagrecer");
+        System.out.println("--------------------------------------------");
+        System.out.printf("Você ira reduzir %dKg após o tratamento",kg);
+        System.out.printf("\nPeso atual:%.2fKg, peso após o tratamento:%.2fkg",cliente.peso,(cliente.peso-kg));
+
+    }
 }
