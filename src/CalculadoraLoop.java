@@ -1,3 +1,4 @@
+//Adicione um loop á calculadora, onde ela deve realizar operações até receber a palavra "fim" na opção de operação.
 import java.util.Scanner;
 
 public class CalculadoraLoop {
