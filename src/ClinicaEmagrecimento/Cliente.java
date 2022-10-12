@@ -5,26 +5,42 @@ public class Cliente {
     Double altura;
     Integer idade;
 
-public static void calcularImc(Double peso, Double altura){
-    double imc;
-    imc = peso / (altura*altura);
-    System.out.printf("IMC: %.1f\n",imc);
-    if(imc<18.50){
-        System.out.println("Muito magro");
-    } else if (imc >= 18.50 && imc <= 24.90) {
-        System.out.println("Normal");
+    public Cliente(Double peso, Double altura) {
+        this.peso = peso;
+        this.altura = altura;
 
-    }else if(imc >= 25.0 && imc <= 29.9){
-        System.out.println("Sobrepeso");
-    } else if (imc >= 30.0 && imc <= 34.90) {
-        System.out.println("Obeso grau I");
-    }else if (imc >= 35.0 && imc <= 39.99) {
-        System.out.println("Obeso grau II");
-    }else{
-        System.out.println("Obeso grau III ou Mórbido");
+
     }
 
-}
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "peso=" + peso +
+                ", altura=" + altura +
+                ", idade=" + idade +
+                '}';
+    }
+
+    public static double calcularImc(Double peso, Double altura){
+    double imc;
+    imc = peso / (altura*altura);
+    if(imc<18.50){
+        System.out.print("Muito magro");
+    } else if (imc >= 18.50 && imc <= 24.90) {
+        System.out.print("Normal");
+
+    }else if(imc >= 25.0 && imc <= 29.9){
+        System.out.print("Sobrepeso");
+    } else if (imc >= 30.0 && imc <= 34.90) {
+        System.out.print("Obeso grau I");
+    }else if (imc >= 35.0 && imc <= 39.99) {
+        System.out.print("Obeso grau II");
+    }else{
+        System.out.print("Obeso grau III ou Mórbido");
+    }
+
+        return imc;
+    }
 
 }
 
