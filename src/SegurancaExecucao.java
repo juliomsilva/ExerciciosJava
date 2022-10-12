@@ -1,3 +1,6 @@
+//Recrie o programa do exercicio 6 e o coloque dentro de um bloco try-catch.
+// Coloque um catch para o NullPointerException e um catch para uma Exception Genérica.
+
 public class SegurancaExecucao {
     public static void main(String[] args) {
         try {
