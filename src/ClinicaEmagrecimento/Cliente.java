@@ -12,6 +12,12 @@ public class Cliente {
 
     }
 
+    public Cliente(Double peso, Double altura, Integer idade) {
+        this.peso = peso;
+        this.altura = altura;
+        this.idade = idade;
+    }
+
     @Override
     public String toString() {
         return "Cliente{" +

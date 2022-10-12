@@ -9,6 +9,7 @@ public class Clinica {
     public static void cadastrarCliente(Cliente cliente){
         clientes.add(cliente);
     }
+
     public static void categorizarCliente(){
          clientes.forEach(r -> {
              double resultadoIMC = Cliente.calcularImc(r.peso,r.altura);
@@ -18,7 +19,6 @@ public class Clinica {
     }
 
     public static void main(String[] args) {
-
         Cliente cliente1 = new Cliente(80.0,1.70);
         Cliente cliente2 = new Cliente(75.0,1.70);
         Cliente cliente3 = new Cliente(85.0,1.70);
